@@ -1,0 +1,32 @@
+@mixin flexible($justify, $align, $dir) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $dir;
+}
+
+.container {
+    @include flexible(center, center, column);
+    background: fixed white;
+    width: fit-content;
+    border-radius: 25px;
+}
+
+.image {
+    border-radius: 50%;
+    margin: 1rem 1.8rem 0;
+    width: 6.19rem;
+    height: 6.19rem;
+
+}
+
+.name {
+    font-size: 1.33rem;
+    color: black;
+}
+
+.description {
+    font-size: 0.55rem;
+    color: #5b5b5b;
+    margin-bottom: 1rem;
+}

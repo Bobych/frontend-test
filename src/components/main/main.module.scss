@@ -1,0 +1,66 @@
+@mixin flexible($justify, $align, $dir) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $dir;
+}
+
+@keyframes arrowAnimation {
+    0% {
+        height: 0;
+        width: 0;
+    }
+    100% {
+        height: 92px;
+        width: 30px;
+    }
+}
+
+.container {
+    @include flexible(center, center, column);
+    padding: 2.6rem 0;
+    width: 100%;
+}
+
+.content {
+    @include flexible(space-between, center, row);
+    min-width: 90vw;
+    flex-wrap: wrap;
+    
+
+    .text {
+        @include flexible(flex-start, flex-start, column);
+        align-self: baseline;
+        font-size: 1rem;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+
+        .firstItem {
+            color: #6b73ff;
+        }
+
+        .secondItem {
+            margin: 0.5rem 0;
+        }
+        
+        .thirdItem {
+            color: #9c9c9c;
+            font-size: .66rem;
+        }
+    }
+}
+
+.image {
+    width: 20rem;
+    height: 20rem;
+}
+
+#arrow {
+    margin-top: 2rem;
+    transition: all 1s;
+    
+}
+
+.arrow-min {
+    animation: arrowAnimation 2s both;
+}

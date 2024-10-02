@@ -1,0 +1,26 @@
+@mixin flexible($justify, $align, $dir) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $dir;
+}
+
+.container {
+    @include flexible(center, center, row);
+    background: white;
+    border-radius: 25px;
+    padding: 3rem;
+    width: 90vw;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.section {
+    @include flexible(center, center, column);
+    padding: 3rem 0;
+    width: 100vw;
+}
+
+.title {
+    margin: 1rem 0;
+}

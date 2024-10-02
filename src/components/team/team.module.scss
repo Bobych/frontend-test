@@ -1,0 +1,27 @@
+@mixin flexible($justify, $align, $dir) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $dir;
+}
+
+.container {
+    @include flexible(center, center, column);
+    background-color: #f6f6f6;
+    border-radius: 25px;
+    color: black;
+    margin: 0 5vw;
+    padding: 2rem;
+}
+
+.members {
+    @include flexible(center, center, row);
+    width: 80vw;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.title {
+    margin: 0 0 2rem 0;
+    font-size: 1.4rem;
+}
